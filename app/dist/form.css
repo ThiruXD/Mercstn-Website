@@ -44,7 +44,7 @@ label {
     margin-bottom: 5px;
 }
 
-input,
+form_control input,
 select,
 textarea {
     padding: 6px 10px;
