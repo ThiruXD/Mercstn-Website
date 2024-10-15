@@ -73,8 +73,8 @@ button {
 
 button:hover {
     background-color: #000000;
-    border-bottom: 10px solid #ffd208;
-    border-right: 10px solid #ffd208;
+    border-bottom: 5px solid #ffd208;
+    border-right: 5px solid #ffd208;
     color: #ffffff;
     transition: 0.3s ease-out;
     cursor: pointer;
