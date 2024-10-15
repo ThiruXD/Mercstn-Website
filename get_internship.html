@@ -271,34 +271,26 @@ button {
   <input type="hidden" name="access_key" value="b9ddde02-85e6-4329-8b21-258dce35eab8">
 
   <fieldset class="text-wrap clearfix flex">
-    <legend>Personal Information</legend>
     <div class="text-box name-wrap">
-      <label for="name">Full Name</label>
       <input type="text" id="name" class="tb-my-input" name="name" tabindex="1" placeholder="Full Name" value="" size="32" aria-required="true" required="">
     </div>
     <div class="text-box phone-wrap ">
-      <label for="tel">Phone Number</label>
       <input type="tel" id="tel" class="tb-my-input" name="phone" tabindex="1" placeholder="Phone Number" value="" size="32" aria-required="true" required="" pattern="^[\d\+\s\(\)]{7,20}$">
     </div>
     <div class="text-box email-wrap">
-      <label for="email">Email Address</label>
       <input type="email" id="email" class="tb-my-input" name="email" tabindex="2" placeholder="Email Address" value="" size="32" aria-required="true" required="">
     </div>
   </fieldset>
 
-  <fieldset class="text-box radio-wrap">
-    <legend>Gender</legend>
+  <fieldset class="text-box message-wrap">
     <label for="gender">Gender:</label>
     <input type="radio" id="male" name="gender" value="male">
     <label for="male">Male</label>
     <input type="radio" id="female" name="gender" value="female">
     <label for="female">Female</label>
-  </fieldset>
-
-  <fieldset class="text-box message-wrap">
-    <legend>Attach Document (Optional)</legend>
+      
+    <legend> Upload Your CV</legend>
     <input type="file" id="document-upload" name="document" accept="application/pdf, application/msword, image/*">
-    <label for="document-upload">Choose Document</label>
     <p id="upload-status"></p>
   </fieldset>
 
