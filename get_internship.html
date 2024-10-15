@@ -26,43 +26,90 @@
     <link rel="apple-touch-icon-precomposed" href="assets/images/logo/Favicon.png">
 
     <stlye>
-        form {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+        .container {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-fieldset {
-  border: none;
-  padding: 10px;
+.apply_box {
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 50px;
+    box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.1);
+    border-radius: 10px;
 }
 
-legend {
-  font-weight: bold;
+.title_small {
+    font-size: 20px;
+}
+
+.form_container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.form_control {
+    display: flex;
+    flex-direction: column;
 }
 
 label {
-  display: block;
-  margin-bottom: 5px;
+    font-size: 15px;
+    margin-bottom: 5px;
 }
 
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+input,
+select,
+textarea {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline-color: red;
+}
+
+.button_container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
 }
 
 button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
+    background-color: red;
+    border: transparent solid 2px;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 8px;
+    transition: 0.3s ease-in;
+}
+
+button:hover {
+    background-color: #ccc;
+    border: 2px solid red;
+    color: black;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+}
+
+.textarea_control {
+    grid-column: 1 / span 2;
+}
+
+.textarea_control textarea {
+    width: 100%;
+}
+
+@media (max-width: 460px) {
+    .textarea_control {
+        grid-column: 1 / span 1;
+    }
 }
     </stlye>
 
@@ -266,45 +313,55 @@ button {
                                             <h6 class="">Apply For Internship</h6>
                                             <h2 class="text-unset">Fill Up The Form To Get Internship</h2>                                                  
                                         </div> 
-                                        <form id="contactform" class="comment-form form-submit" method="post" action="https://api.web3forms.com/submit" enctype="multipart/form-data" accept-charset="utf-8" novalidate>
-
-  <input type="hidden" name="access_key" value="b9ddde02-85e6-4329-8b21-258dce35eab8">
-
-  <fieldset class="text-wrap clearfix flex">
-    <div class="text-box name-wrap">
-      <input type="text" id="name" class="tb-my-input" name="name" tabindex="1" placeholder="Full Name" value="" size="32" aria-required="true" required="">
-    </div>
-    <div class="text-box phone-wrap ">
-      <input type="tel" id="tel" class="tb-my-input" name="phone" tabindex="1" placeholder="Phone Number" value="" size="32" aria-required="true" required="" pattern="^[\d\+\s\(\)]{7,20}$">
-    </div>
-    <div class="text-box email-wrap">
-      <input type="email" id="email" class="tb-my-input" name="email" tabindex="2" placeholder="Email Address" value="" size="32" aria-required="true" required="">
-    </div>
-  </fieldset>
-
-  <fieldset class="text-box message-wrap">
-    <label for="gender">Gender:</label>
-    <input type="radio" id="male" name="gender" value="male">
-    <label for="male">Male</label>
-    <input type="radio" id="female" name="gender" value="female">
-    <label for="female">Female</label>
-      
-    <legend> Upload Your CV</legend>
-    <input type="file" id="document-upload" name="document" accept="application/pdf, application/msword, image/*">
-    <p id="upload-status"></p>
-  </fieldset>
-
-  <div class="button-box center">
-    <button id="submit" name="submit" type="submit" class="cta btn-5">
-      <span>Send Us Message</span>
-      <span>
-        <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          </svg>
-      </span>
-    </button>
-  </div>
-
-</form>
+            <form action="">
+                <div class="form_container">
+                    <div class="form_control">
+                        <label for="first_name"> First Name </label>
+                        <input id="first_name" name="first_name" placeholder="Enter First Name..." />
+                    </div>
+                    <div class="form_control">
+                        <label for="last_name"> Last Name </label>
+                        <input id="last_name" name="last_name" placeholder="Enter Last Name..." />
+                    </div>
+                    <div class="form_control">
+                        <label for="email"> Email </label>
+                        <input type="email" id="email" name="email" placeholder="Enter Email..." />
+                    </div>
+                    <div class="form_control">
+                        <label for="job_role"> Job Role </label>
+                        <select id="job_role" name="job_role">
+                <option value="">Select Job Role</option>
+                <option value="frontend">Frontend Developer</option>
+                <option value="backend">Backend Developer</option>
+                <option value="full_stack">Full Stack Developer</option>
+                <option value="ui_ux">UI UX Designer</option>
+              </select>
+                    </div>
+                    <div class="textarea_control">
+                        <label for="address"> Address </label>
+                        <textarea id="address" name="address" row="4" cols="50" placeholder="Enter Address"></textarea>
+                    </div>
+                    <div class="form_control">
+                        <label for="city"> City </label>
+                        <input id="city" name="city" placeholder="Enter City Name..." />
+                    </div>
+                    <div class="form_control">
+                        <label for="pincode"> Pincode </label>
+                        <input type="number" id="pincode" name="pincode" placeholder="Enter Pincode Name..." />
+                    </div>
+                    <div class="form_control">
+                        <label for="date"> Date </label>
+                        <input value="2022-01-10" type="date" id="date" name="date" />
+                    </div>
+                    <div class="form_control">
+                        <label for="upload"> Upload Your CV </label>
+                        <input type="file" id="upload" name="upload" />
+                    </div>
+                </div>
+                <div class="button_container">
+                    <button type="submit">Apply Now</button>
+                </div>
+            </form>
                                     </div>
                                 </div>
                             </div>
