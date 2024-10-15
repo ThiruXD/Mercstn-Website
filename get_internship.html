@@ -246,7 +246,14 @@
                                                         aria-required="true" required="">
                                                 </fieldset>
                                             </div>
-                                            <fieldset class="message-wrap">
+                                            <fieldset class="text-box radio-wrap">
+                                                <label for="gender">Gender:</label>
+                                                <input type="radio" id="male" name="gender" value="male">
+                                                <label for="male">Male</label>
+                                                <input type="radio" id="female" name="gender" value="female">
+                                                <label for="female">Female</label>
+                                            </fieldset>
+                                            <fieldset class="text-box message-wrap">
                                                 <input type="file" id="document-upload" name="document" accept="application/pdf, application/msword, image/*">
                                                 <label for="document-upload">Choose Document</label>
                                                 <p id="upload-status"></p>
