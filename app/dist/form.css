@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #ccc;
+    background-color: #ffffff;
 }
 
 .container {
@@ -64,7 +64,7 @@ input:focus {
 }
 
 button {
-    background-color: red;
+    background-color: #6f00e6;
     border: transparent solid 2px;
     padding: 5px 10px;
     color: white;
@@ -73,9 +73,9 @@ button {
 }
 
 button:hover {
-    background-color: #ccc;
-    border: 2px solid red;
-    color: black;
+    background-color: #000000;
+    border: 2px solid #ffd208;
+    color: #ffffff;
     transition: 0.3s ease-out;
     cursor: pointer;
 }
