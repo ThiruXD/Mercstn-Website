@@ -226,8 +226,9 @@
                                             <h2 class="text-unset">Fill Up The Form To Get Internship</h2>                                                  
                                         </div> 
                                         <form method="post" id="contactform" class="comment-form form-submit"
-                                            action="./contact/contact-process.php" accept-charset="utf-8"
+                                            action="https://api.web3forms.com/submit" accept-charset="utf-8"
                                             novalidate="novalidate">
+                                            <input type="hidden" name="access_key" value="b9ddde02-85e6-4329-8b21-258dce35eab8">
                                             <div class="text-wrap clearfix flex">
                                                 <fieldset class="text-box name-wrap">
                                                     <input type="text" id="name" class="tb-my-input" name="name"
@@ -246,9 +247,9 @@
                                                 </fieldset>
                                             </div>
                                             <fieldset class="message-wrap">
-                                                <textarea id="comment-message" name="message" rows="4" tabindex="5"
-                                                    placeholder="Write Message"
-                                                    aria-required="true"></textarea>
+                                                <input type="file" id="document-upload" name="document" accept="application/pdf, application/msword, image/*">
+                                                <label for="document-upload">Choose Document</label>
+                                                <p id="upload-status"></p>
                                             </fieldset>
                                             <div class="button-box center">
                                                 <button id="submit" name="submit" type="submit" class="cta btn-5"> 
