@@ -214,76 +214,68 @@
                 </div>                    
             </section> 
 
-            <section class="flat-contact page">
-                <div class="container">
-                    <div class="row">                      
-                        <div class="col-lg-12">
-                            <div class="wrap-contact">
-                                <div id="comments" class="comments">
-                                    <div id="respond" class="respond-comment">
-                <div class="container">
-        <div class="apply_box">
-            <h4>
-                Get Internship
-            </h4>
-            <form action="">
-                <div class="form_container">
-                    <div class="form_control">
-                        <label for="first_name"> First Name </label>
-                        <input id="first_name" name="first_name" placeholder="Enter First Name..." />
-                    </div>
-                    <div class="form_control">
-                        <label for="last_name"> Last Name </label>
-                        <input id="last_name" name="last_name" placeholder="Enter Last Name..." />
-                    </div>
-                    <div class="form_control">
-                        <label for="email"> Email </label>
-                        <input type="email" id="email_address" name="email_address" placeholder="Enter Email..." />
-                    </div>
-                    <div class="form_control">
-                        <label for="job_role"> Tranning Role </label>
-                        <select id="job_role" name="job_role">
-                <option value="">Select Tranning Role</option>
-                <option value="frontend">Frontend Developer</option>
-                <option value="backend">Backend Developer</option>
-                <option value="full_stack">Full Stack Developer</option>
-                <option value="ui_ux">UI UX Designer</option>
-              </select>
-                    </div>
-                    <div class="textarea_control">
-                        <label for="address"> Address </label>
-                        <textarea id="place_address" name="place_address" row="4" cols="50" placeholder="Enter Address"></textarea>
-                    </div>
-                    <div class="form_control">
-                        <label for="city"> City </label>
-                        <input id="city" name="city" placeholder="Enter City Name..." />
-                    </div>
-                    <div class="form_control">
-                        <label for="pincode"> Pincode </label>
-                        <input type="number" id="pincodee" name="pincodee" placeholder="Enter Pincode Name..." />
-                    </div>
-                    <div class="form_control">
-                        <label for="date"> Date Of Birth</label>
-                        <input value="2022-01-10" type="date" id="datee" name="datee" />
-                    </div>
-                    <div class="form_control">
-                        <label for="upload"> Upload Your CV </label>
-                        <input type="file" id="upload" name="upload" />
-                    </div>
-                </div>
-                <div class="button_container">
-                    <button type="submit">Apply Now</button>
-                </div>
-            </form>
-        </div>
-    </div>
-                                    </div>
-                                </div>
+<section class="flat-contact page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="wrap-contact">
+                    <div id="comments" class="comments">
+                        <div id="respond" class="respond-comment">
+                            <div class="heading-section center">
+                                <h6>Get In Touch</h6>
+                                <h2 class="text-unset">Have Any Question On Mind! Send Us  Message</h2>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                            <form method="post" id="contactform" class="comment-form form-submit"
+                                action="./contact/contact-process.php" accept-charset="utf-8"
+                                novalidate="novalidate">
+                                <div class="text-wrap clearfix flex">
+                                    <fieldset class="text-box name-wrap">
+                                        <input type="text" id="name" class="tb-my-input" name="name"
+                                            tabindex="1" placeholder="Full Name" value="" size="32"
+                                            aria-required="true" required="">
+                                    </fieldset>
+                                    <fieldset class="text-box phone-wrap ">
+                                        <input type="tel" id="tel" class="tb-my-input" name="phone"
+                                            tabindex="1" placeholder="Phone Number" value="" size="32"
+                                            aria-required="true" required="" pattern="^[\d\+\s\(\)]{7,20}$">
+                                    </fieldset>
+                                    <fieldset class="text-box email-wrap">
+                                        <input type="email" id="email" class="tb-my-input" name="email"
+                                            tabindex="2" placeholder="Email Address" value="" size="32"
+                                            aria-required="true" required="">
+                                    </fieldset>
+                                    <fieldset class="text-box file-wrap">
+                                        <label for="cv">Upload Your CV</label>
+                                        <input type="file" id="cv" name="cv" accept=".pdf,.docx" tabindex="4">
+                                    </fieldset>
+                                    <fieldset class="text-box date-wrap">
+                                        <label for="dob">Date of Birth</label>
+                                        <input type="date" id="dob" name="dob" tabindex="3">
+                                    </fieldset>
+                                    <fieldset class="text-box role-wrap">
+                                        <label for="role">Type Your Role</label>
+                                        <select id="role" name="role" tabindex="3">
+                                            <option value="">Select Role</option>
+                                            <option value="frontend">Frontend Developer</option>
+                                            <option value="backend">Backend Developer</option>
+                                            <option value="full_stack">Full Stack Developer</option>
+                                            <option value="ui_ux">UI UX Designer</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
+                                <fieldset class="message-wrap">
+                                    <textarea id="comment-message" name="message" rows="4" tabindex="5"
+                                        placeholder="Write Message"
+                                        aria-required="true"></textarea>
+                                </fieldset>
+                                <div class="button-box center">
+                                    <button id="submit" name="submit" type="submit" class="cta btn-5">
+                                        <span>Send Us Message</span>
+                                        <span>
+                                            <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <g  stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <path class="one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+                                                    <path class="two" d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.
 
 
            <!-- Footer -->
