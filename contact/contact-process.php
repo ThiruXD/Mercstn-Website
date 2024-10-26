@@ -3,7 +3,7 @@ $address = "thiruselvan868@gmail.com"; // Your email address
 if (!defined("PHP_EOL")) define("PHP_EOL", "\r\n");
 
 $error = false;
-$fields = array('name', 'email', 'phone', 'subject', 'message');
+$fields = array('name', 'email', 'phone', 'dob', 'subject', 'message');
 
 foreach ($fields as $field) {
     if (empty($_POST[$field]) || trim($_POST[$field]) == '') {
@@ -15,6 +15,7 @@ if (!$error) {
     $name = stripslashes($_POST['name']);
     $email = trim($_POST['email']);
     $phone = trim($_POST['phone']);
+    $dob = trim($_POST['dob']);
     $subject = stripslashes($_POST['subject']);
     $message = stripslashes($_POST['message']);
 
@@ -24,9 +25,10 @@ if (!$error) {
     $e_body = "You have been contacted by: $name" . PHP_EOL . PHP_EOL;
     $e_reply = "E-mail: $email" . PHP_EOL;
     $e_phone = "Phone: $phone" . PHP_EOL;
+    $e_dob = "Date of Birth: $dob" . PHP_EOL;
     $e_content = "Subject: $subject" . PHP_EOL . "Message:\r\n$message" . PHP_EOL;
 
-    $msg = wordwrap($e_body . $e_reply . $e_phone . $e_content, 70);
+    $msg = wordwrap($e_body . $e_reply . $e_phone . $e_dob . $e_content, 70);
 
     $headers = "From: $email" . PHP_EOL;
     $headers .= "Reply-To: $email" . PHP_EOL;
@@ -50,7 +52,7 @@ if (!$error) {
             $dest_path = $uploadFileDir . $fileName;
 
             // Move the file to the destination
-            if(move_uploaded_file($fileTmpPath, $dest_path)) {
+            if(move_uploaded_file($fileTmp Path, $dest_path)) {
                 // File is successfully uploaded
                 $msg .= PHP_EOL . "File uploaded: " . $fileName;
             } else {
